@@ -185,7 +185,7 @@ export function AddToCartPanel({ product }: { product: Product }) {
         <button
           type="submit"
           disabled={whatsappLoading}
-          className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-emerald-600 px-4 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:bg-emerald-600/50"
+          className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-whats px-4 text-sm font-semibold text-white transition hover:bg-whats-deep disabled:opacity-50"
         >
           <MessageCircle className="h-4 w-4" aria-hidden />
           {whatsappLoading ? "Abriendo WhatsApp..." : "Comprar por WhatsApp"}
