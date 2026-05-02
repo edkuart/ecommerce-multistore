@@ -20,12 +20,16 @@ async function start(): Promise<void> {
     });
   });
 
-  await syncModels();
-  await ensureDefaultStores();
-  const backfilledMovements = await backfillInitialInventoryMovements();
-
-  if (backfilledMovements > 0) {
-    console.log(`Inventory ledger initialized for ${backfilledMovements} products`);
+  try {
+    await syncModels();
+    await ensureDefaultStores();
+    const backfilledMovements = await backfillInitialInventoryMovements();
+    if (backfilledMovements > 0) {
+      console.log(`Inventory ledger initialized for ${backfilledMovements} products`);
+    }
+    console.log("Database ready");
+  } catch (error) {
+    console.error("Database initialization failed — server stays up", error);
   }
 }
 
