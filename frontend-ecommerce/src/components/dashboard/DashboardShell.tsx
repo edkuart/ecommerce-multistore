@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {
   Boxes,
+  ExternalLink,
   FolderTree,
   Home,
   LogOut,
@@ -204,8 +205,15 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
           })}
         </nav>
 
-        {/* Logout */}
-        <div className="mt-3 border-t border-ink/8 px-3 pt-3">
+        {/* Ver catálogo + Logout */}
+        <div className="mt-3 border-t border-ink/8 px-3 pt-3 grid gap-1">
+          <Link
+            href="/"
+            className="flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-semibold text-ink/70 transition hover:bg-linen/60 hover:text-ink"
+          >
+            <ExternalLink className="h-5 w-5 shrink-0" aria-hidden />
+            Ver catálogo
+          </Link>
           <button
             type="button"
             onClick={handleLogout}

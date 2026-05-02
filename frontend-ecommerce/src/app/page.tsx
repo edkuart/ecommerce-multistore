@@ -1,5 +1,8 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import Link from "next/link";
+import { LayoutDashboard } from "lucide-react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { CategoriesIndex } from "@/components/home/CategoriesIndex";
@@ -22,6 +25,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   const activeCategory = searchParams?.category;
   const searchQuery = searchParams?.search?.trim() || undefined;
   const isFiltering = Boolean(activeCategory || searchQuery);
+  const isAdmin = Boolean((await cookies()).get("seller_token")?.value);
 
   const [products, categories, stores] = await Promise.all([
     getProducts({ category: activeCategory, active: true, search: searchQuery }),
@@ -34,6 +38,15 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
   return (
     <div className="bg-paper">
+      {isAdmin && (
+        <Link
+          href="/dashboard"
+          className="fixed bottom-6 right-4 z-50 flex items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-xs font-semibold text-paper shadow-lg transition hover:bg-ink/85 active:scale-95"
+        >
+          <LayoutDashboard className="h-3.5 w-3.5" aria-hidden />
+          Panel admin
+        </Link>
+      )}
       {/* ── Hero ── */}
       <HeroSection
         productCount={products.length}
