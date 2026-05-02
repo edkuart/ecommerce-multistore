@@ -33,6 +33,9 @@ function MovementCardSkeleton() {
   );
 }
 
+// Fixed bar heights avoid SSR / hydration mismatch
+const BAR_HEIGHTS = ["40%", "65%", "30%", "80%", "55%", "90%", "45%", "70%", "35%", "60%", "75%", "50%", "85%", "40%"];
+
 export default function InventoryLoading() {
   return (
     <div className="grid gap-6">
@@ -58,11 +61,11 @@ export default function InventoryLoading() {
         <div className="animate-pulse rounded-md border border-ink/10 bg-white p-5 shadow-sm space-y-4">
           <SkeletonBlock className="h-4 w-28" />
           <div className="flex items-end gap-1.5 h-28">
-            {Array.from({ length: 14 }).map((_, i) => (
-              <SkeletonBlock
+            {BAR_HEIGHTS.map((h, i) => (
+              <div
                 key={i}
-                className="flex-1 rounded-t-sm"
-                style={{ height: `${20 + Math.random() * 80}%` } as React.CSSProperties}
+                className="flex-1 animate-pulse rounded-t-sm bg-linen"
+                style={{ height: h }}
               />
             ))}
           </div>
