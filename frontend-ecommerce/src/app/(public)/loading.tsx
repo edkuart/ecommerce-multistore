@@ -1,3 +1,5 @@
+import { Skeleton } from "@/components/ui";
+
 function SkeletonCard() {
   return (
     <div className="flex flex-col gap-3 animate-pulse">

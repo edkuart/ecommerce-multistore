@@ -1,6 +1,4 @@
-function Skeleton({ className }: { className?: string }) {
-  return <div className={`animate-pulse rounded bg-linen ${className ?? ""}`} />;
-}
+import { Skeleton } from "@/components/ui";
 
 export default function ProductLoading() {
   return (

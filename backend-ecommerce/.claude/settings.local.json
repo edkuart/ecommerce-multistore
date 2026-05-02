@@ -27,7 +27,9 @@
       "Bash(mkdir -p 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/\\(protected\\)/orders/[id]')",
       "Bash(mv 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/product/[id]/page.tsx' 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/\\(public\\)/product/[id]/page.tsx')",
       "Bash(rmdir 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/product/[id]')",
-      "Bash(mv 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/orders/[id]/page.tsx' 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/\\(protected\\)/orders/[id]/page.tsx')"
+      "Bash(mv 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/orders/[id]/page.tsx' 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/\\(protected\\)/orders/[id]/page.tsx')",
+      "Bash(Get-ChildItem -Recurse -Path \"C:\\\\Users\\\\Dell\\\\Projects\\\\ecommerce\\\\frontend-ecommerce\\\\src\" -Filter \"*.tsx\" -File)",
+      "Bash(Select-Object -ExpandProperty FullName)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Dell\\Projects\\ecommerce\\frontend-ecommerce\\src\\app",

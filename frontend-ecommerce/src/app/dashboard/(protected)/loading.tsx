@@ -1,6 +1,4 @@
-function SkeletonBlock({ className }: { className?: string }) {
-  return <div className={`animate-pulse rounded bg-linen ${className ?? ""}`} />;
-}
+import { Skeleton as SkeletonBlock } from "@/components/ui";
 
 function SummaryCardSkeleton() {
   return (
