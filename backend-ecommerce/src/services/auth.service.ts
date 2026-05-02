@@ -67,6 +67,24 @@ export async function registerUser(input: RegisterInput): Promise<{ user: AuthUs
   };
 }
 
+export async function ensureAdminUser(): Promise<void> {
+  const email = (process.env.ADMIN_EMAIL || "admin@ecommerce.local").toLowerCase().trim();
+  const existing = await User.findOne({ where: { email } });
+  if (existing) return;
+
+  const password = process.env.ADMIN_PASSWORD || "changeme123";
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  await User.create({
+    name: "Admin",
+    email,
+    password: passwordHash,
+    role: "admin",
+  });
+
+  console.log(`Admin user created: ${email}`);
+}
+
 export async function loginUser(input: LoginInput): Promise<{ user: AuthUserDTO; token: string }> {
   const user = await User.findOne({ where: { email: input.email } });
 

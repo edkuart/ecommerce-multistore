@@ -2,6 +2,7 @@ import http from "http";
 import app from "./app";
 import { env } from "./config/env";
 import { sequelize, syncModels } from "./models";
+import { ensureAdminUser } from "./services/auth.service";
 import { backfillInitialInventoryMovements } from "./services/inventory.service";
 import { ensureDefaultStores } from "./services/store.service";
 
@@ -23,6 +24,7 @@ async function start(): Promise<void> {
   try {
     await syncModels();
     await ensureDefaultStores();
+    await ensureAdminUser();
     const backfilledMovements = await backfillInitialInventoryMovements();
     if (backfilledMovements > 0) {
       console.log(`Inventory ledger initialized for ${backfilledMovements} products`);
