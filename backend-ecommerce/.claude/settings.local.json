@@ -2,7 +2,32 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/Dell/Projects/ecommerce//**)",
-      "Bash(node scripts/generate-pwa-icons.mjs)"
+      "Bash(node scripts/generate-pwa-icons.mjs)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce status --short)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce diff --name-only HEAD)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce ls-files --others --exclude-standard backend-ecommerce/src/)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce ls-files backend-ecommerce/src/services/product.service.ts backend-ecommerce/src/controllers/inventory.controller.ts backend-ecommerce/src/shared/utils/storeAccess.ts)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce diff --stat HEAD -- backend-ecommerce/src/)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce status --short backend-ecommerce/src/)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce log --oneline -3)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce show --name-only bfa13c3)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce show bfa13c3 -- backend-ecommerce/src/shared/utils/storeAccess.ts)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce show bfa13c3 -- backend-ecommerce/src/controllers/inventory.controller.ts)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce log --oneline origin/main..HEAD)",
+      "Bash(git -C /c/Users/Dell/Projects/ecommerce remote -v)",
+      "Bash(node -e \"console.log\\(require\\('crypto'\\).randomBytes\\(64\\).toString\\('hex'\\)\\)\")",
+      "Bash(xargs grep *)",
+      "Bash(npx tsc *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Dell\\\\Projects\\\\ecommerce\\\\frontend-ecommerce\\\\src\\\\app\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\('C:\\\\Users\\\\Dell\\\\Projects\\\\ecommerce\\\\frontend-ecommerce\\\\src\\\\app', ''\\) })",
+      "Bash(xargs ls *)",
+      "Bash(mkdir -p 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/\\(public\\)/product/[id]')",
+      "Bash(mkdir -p 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/\\(protected\\)/orders/[id]')",
+      "Bash(mv 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/product/[id]/page.tsx' 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/\\(public\\)/product/[id]/page.tsx')",
+      "Bash(rmdir 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/product/[id]')",
+      "Bash(mv 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/orders/[id]/page.tsx' 'C:/Users/Dell/Projects/ecommerce/frontend-ecommerce/src/app/dashboard/\\(protected\\)/orders/[id]/page.tsx')"
     ],
     "additionalDirectories": [
       "C:\\Users\\Dell\\Projects\\ecommerce\\frontend-ecommerce\\src\\app",

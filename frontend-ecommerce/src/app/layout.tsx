@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { CartProvider } from "@/components/cart/CartProvider";
-import { Footer } from "@/components/layout/Footer";
-import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
-import { Header } from "@/components/layout/Header";
-import { PwaRegister } from "@/components/layout/PwaRegister";
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
@@ -49,23 +44,13 @@ export const viewport: Viewport = {
   themeColor: "#fbfaf7",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="es"
       className={`${dmSerif.variable} ${jetbrainsMono.variable} ${inter.variable}`}
     >
-      <body className="min-h-screen antialiased">
-        <PwaRegister />
-        <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <FloatingWhatsApp />
-        </CartProvider>
-      </body>
+      <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
 }
