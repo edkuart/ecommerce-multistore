@@ -13,6 +13,13 @@ server.headersTimeout = 35_000;
 server.keepAliveTimeout = 65_000;
 
 async function start(): Promise<void> {
+  await new Promise<void>((resolve) => {
+    server.listen(PORT, () => {
+      console.log(`Ecommerce backend listening on port ${PORT}`);
+      resolve();
+    });
+  });
+
   await syncModels();
   await ensureDefaultStores();
   const backfilledMovements = await backfillInitialInventoryMovements();
@@ -20,10 +27,6 @@ async function start(): Promise<void> {
   if (backfilledMovements > 0) {
     console.log(`Inventory ledger initialized for ${backfilledMovements} products`);
   }
-
-  server.listen(PORT, () => {
-    console.log(`Ecommerce backend listening on port ${PORT}`);
-  });
 }
 
 let shuttingDown = false;
