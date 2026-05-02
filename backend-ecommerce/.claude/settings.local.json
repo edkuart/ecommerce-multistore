@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Dell/Projects/ecommerce//**)",
+      "Bash(node scripts/generate-pwa-icons.mjs)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Dell\\Projects\\ecommerce\\frontend-ecommerce\\src\\app",
+      "C:\\Users\\Dell\\Projects\\ecommerce\\frontend-ecommerce\\src\\components\\layout",
+      "C:\\Users\\Dell\\Projects\\ecommerce\\frontend-ecommerce"
+    ]
+  }
+}

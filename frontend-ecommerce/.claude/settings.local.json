@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(gunzip -c \"/c/Users/Dell/.claude/projects/c--Users-Dell-Projects-ecommerce-frontend-ecommerce/51a5348d-1d67-46e4-8197-03cb101fd2bd/tool-results/webfetch-1777661000490-hki2ro.bin\")",
+      "Bash(tar -x --wildcards \"*/Home.html\" -O)",
+      "Bash(tar -x --wildcards \"*/home-sections.jsx\" -O)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/)",
+      "Bash(curl -s http://localhost:3001/)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /PID 15620 /F)",
+      "PowerShell(Stop-Process -Id 15620 -Force)",
+      "Read(//c/Users/Dell/Projects/ecommerce/backend-ecommerce/src/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Dell\\Projects\\ecommerce\\frontend-ecommerce\\.next",
+      "C:\\Users\\Dell\\Projects\\ecommerce\\backend-ecommerce\\src\\models",
+      "C:\\Users\\Dell\\Projects\\ecommerce\\backend-ecommerce\\src\\services",
+      "C:\\Users\\Dell\\Projects\\ecommerce\\backend-ecommerce\\src\\controllers",
+      "C:\\Users\\Dell\\Projects\\ecommerce\\backend-ecommerce\\src\\routes"
+    ]
+  }
+}

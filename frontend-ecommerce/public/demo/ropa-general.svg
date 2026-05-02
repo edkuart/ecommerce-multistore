@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Ropa general">
+  <rect width="800" height="1000" fill="#eef2ed"/>
+  <path d="M250 250h300l95 160-100 70-45-70v360H300V410l-45 70-100-70 95-160z" fill="#273f32"/>
+  <path d="M330 250c18 55 122 55 140 0" fill="none" stroke="#f1ece3" stroke-width="24" stroke-linecap="round"/>
+  <rect x="330" y="520" width="140" height="28" rx="14" fill="#9c5f3f"/>
+  <rect x="300" y="770" width="200" height="26" rx="13" fill="#171511" opacity=".25"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" fill="#F1ECE3"/>
+  <rect x="165" y="175" width="570" height="750" rx="12" fill="#FBFAF7"/>
+  <path d="M300 405C356 360 399 337 450 337C501 337 544 360 600 405L558 485L520 468V760H380V468L342 485L300 405Z" fill="#273F32" fill-opacity="0.88"/>
+  <path d="M345 405C383 382 416 370 450 370C484 370 517 382 555 405" stroke="#FBFAF7" stroke-width="14" stroke-linecap="round"/>
+  <text x="450" y="980" text-anchor="middle" fill="#9C5F3F" font-family="Arial, sans-serif" font-size="34" letter-spacing="6">ECOMMERCE</text>
+</svg>

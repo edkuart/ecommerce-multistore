@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Ropa de ninas">
+  <rect width="800" height="1000" fill="#f7e8e8"/>
+  <circle cx="400" cy="250" r="120" fill="#f3c7cf"/>
+  <path d="M275 360h250l95 420H180l95-420z" fill="#d86f8d"/>
+  <path d="M315 360c20 60 150 60 170 0" fill="none" stroke="#fff7f7" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="325" cy="520" r="18" fill="#fff7f7"/>
+  <circle cx="475" cy="520" r="18" fill="#fff7f7"/>
+  <path d="M245 780h310" stroke="#9c5f3f" stroke-width="20" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Calzado">
+  <rect width="800" height="1000" fill="#ebe8df"/>
+  <path d="M190 600c120 20 200-40 265-95 35-30 80-28 110 8l90 110c25 30 12 78-27 91-150 52-325 46-490-18-45-18-40-104 52-96z" fill="#2f405f"/>
+  <path d="M230 620c145 38 265 22 400-6" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M455 505l-75-95" stroke="#9c5f3f" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="485" cy="560" r="18" fill="#f1ece3"/>
+  <circle cx="535" cy="568" r="18" fill="#f1ece3"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Mayoreo">
+  <rect width="800" height="1000" fill="#f6efe4"/>
+  <rect x="160" y="300" width="220" height="220" rx="18" fill="#9c5f3f"/>
+  <rect x="420" y="300" width="220" height="220" rx="18" fill="#273f32"/>
+  <rect x="250" y="560" width="300" height="240" rx="20" fill="#2f405f"/>
+  <path d="M160 360h220M420 360h220M250 630h300" stroke="#fff7ed" stroke-width="22" stroke-linecap="round"/>
+  <path d="M300 250h200" stroke="#171511" stroke-opacity=".25" stroke-width="28" stroke-linecap="round"/>
+</svg>

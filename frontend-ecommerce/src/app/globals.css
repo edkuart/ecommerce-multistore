@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-serif: "DM Serif Display", "Times New Roman", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #fbfaf7;
+  color: #171511;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Subtle linen texture — radial dot layers */
+  background-image:
+    radial-gradient(rgba(156, 95, 63, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(39, 63, 50, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px, 36px 36px;
+  background-position: 0 0, 12px 18px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #9c5f3f;
+  color: #fbfaf7;
+}
+
+/* ── Category index row — sliding left-bar on hover ── */
+.cat-row {
+  position: relative;
+  transition: padding-left 280ms cubic-bezier(.2,.7,.2,1);
+}
+.cat-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: #9c5f3f;
+  transition: width 280ms cubic-bezier(.2,.7,.2,1);
+}
+.cat-row:hover {
+  padding-left: 24px;
+}
+.cat-row:hover::before {
+  width: 4px;
+}
+.cat-row:hover .cat-row-name {
+  color: #9c5f3f;
+}
+.cat-row:hover .cat-row-arrow {
+  transform: translateX(8px);
+}
+.cat-row-name {
+  transition: color 180ms cubic-bezier(.2,.7,.2,1);
+}
+.cat-row-arrow {
+  transition: transform 180ms cubic-bezier(.2,.7,.2,1);
+}
+
+/* ── Product card quick-action overlay ── */
+.p-quick {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 280ms cubic-bezier(.2,.7,.2,1), transform 280ms cubic-bezier(.2,.7,.2,1);
+}
+.product-card:hover .p-quick {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (hover: none) {
+  .p-quick {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Hero collage tile hover lift ── */
+.hero-tile {
+  transition: transform 280ms cubic-bezier(.2,.7,.2,1), box-shadow 280ms cubic-bezier(.2,.7,.2,1);
+}
+.hero-tile:hover {
+  transform: translateY(-4px);
+}
